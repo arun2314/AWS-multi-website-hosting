@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshCart | Grocery Store</title>
+<style>
+:root{--green:#16834a;--dark:#173b2a;--mint:#eaf7ef;--ink:#203027;--muted:#6d7b72;--line:#e6eee8}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fbfdfb}a{text-decoration:none;color:inherit}
+.top{background:var(--dark);color:white;text-align:center;padding:9px;font-size:13px}.nav{display:flex;align-items:center;justify-content:space-between;padding:18px max(5%,calc((100% - 1160px)/2));background:white;border-bottom:1px solid var(--line);gap:20px;position:sticky;top:0;z-index:2}
+.logo{font-size:25px;font-weight:800;color:var(--green)}.logo span{color:#f2a93b}.navlinks{display:flex;gap:24px;font-size:14px;color:#526158}.cart{border:0;background:var(--green);color:white;padding:11px 16px;border-radius:10px;font-weight:700}
+.wrap{max-width:1160px;margin:auto;padding:0 22px}.hero{margin:34px auto;background:linear-gradient(110deg,#eaf7ef,#f7f9e9);border-radius:22px;padding:54px 6%;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:25px;overflow:hidden}
+.eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:1.5px}.hero h1{font-size:clamp(34px,5vw,55px);line-height:1.05;margin:12px 0}.hero p{color:var(--muted);line-height:1.7;max-width:480px}.cta{display:inline-block;background:var(--green);color:white;padding:14px 21px;border-radius:10px;margin-top:12px;font-weight:700}.hero-art{font-size:130px;text-align:center;filter:drop-shadow(0 15px 15px #73977b55)}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;margin:42px 0 18px}.sectionhead h2{margin:0;font-size:27px}.sectionhead p{color:var(--muted);margin:6px 0 0}.categories,.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.cat,.product{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}.cat .emoji{font-size:38px}.cat h3{font-size:15px;margin:10px 0 0}.product{text-align:left;padding:14px}.product .photo{height:140px;border-radius:12px;background:var(--mint);display:grid;place-items:center;font-size:65px}.product h3{font-size:16px;margin:13px 0 5px}.product p{font-size:13px;color:var(--muted);margin:0}.price{font-weight:800;margin-top:12px}.add{float:right;border:1px solid var(--green);color:var(--green);background:white;border-radius:8px;padding:7px 12px;font-weight:700;cursor:pointer}
+footer{margin-top:60px;background:var(--dark);color:#dce9df;padding:30px;text-align:center;font-size:13px}
+@media(max-width:720px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:35px 25px}.hero-art{font-size:85px}.categories,.products{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body>
+<div class="top">Fresh groceries delivered to your door • Free delivery on orders over ₹499</div>
+<nav class="nav"><div class="logo">Fresh<span>Cart</span></div><div class="navlinks"><a href="#">Home</a><a href="#categories">Categories</a><a href="#products">Shop</a><a href="#about">About</a></div><button class="cart" onclick="alert('Cart preview: frontend demo only')">🛒 Cart (<span id="count">0</span>)</button></nav>
+<main class="wrap">
+<section class="hero"><div><div class="eyebrow">Good food. Good mood.</div><h1>Fresh picks for a healthier you.</h1><p>Discover farm-fresh fruits, vegetables and everyday essentials. Quality groceries, made simple.</p><a class="cta" href="#products">Shop groceries →</a></div><div class="hero-art">🥑🥬🍊</div></section>
+<div class="sectionhead" id="categories"><div><h2>Shop by category</h2><p>Everything you need, all in one place.</p></div></div>
+<section class="categories"><div class="cat"><div class="emoji">🍎</div><h3>Fruits</h3></div><div class="cat"><div class="emoji">🥦</div><h3>Vegetables</h3></div><div class="cat"><div class="emoji">🥛</div><h3>Dairy</h3></div><div class="cat"><div class="emoji">🍞</div><h3>Bakery</h3></div></section>
+<div class="sectionhead" id="products"><div><h2>Popular this week</h2><p>Fresh favourites picked for you.</p></div></div>
+<section class="products">
+<div class="product"><div class="photo">🍓</div><h3>Fresh Strawberries</h3><p>Farm fresh • 250 g</p><div class="price">₹129 <button class="add" onclick="add()">Add +</button></div></div>
+<div class="product"><div class="photo">🥑</div><h3>Avocado</h3><p>Ripe and creamy • 2 pcs</p><div class="price">₹99 <button class="add" onclick="add()">Add +</button></div></div>
+<div class="product"><div class="photo">🥕</div><h3>Organic Carrots</h3><p>Fresh produce • 500 g</p><div class="price">₹45 <button class="add" onclick="add()">Add +</button></div></div>
+<div class="product"><div class="photo">🥛</div><h3>Fresh Milk</h3><p>Pasteurised • 1 litre</p><div class="price">₹64 <button class="add" onclick="add()">Add +</button></div></div>
+</section></main><footer id="about">FreshCart — frontend demonstration for your AWS WordPress project. Payments, orders and inventory are not connected.</footer>
+<script>let count=0;function add(){document.getElementById('count').textContent=++count}</script>
+</body></html>
